@@ -3,7 +3,7 @@
 # (Reemplazar Nombre con el nombre del usuario)
 
 name = input('Enter your name: ')
-if name == 'Bond':
+if str(name).lower() == 'bond':
     print('Welcome aboard 007')
 else:
     print(f'Good morning {name}')
@@ -64,9 +64,19 @@ while(True):
         print('Invalid option. Please enter a number between 1 and 4.') 
 
 
-# 3. Siendo d = ( x1  2 + y1  2) ** 0.5
+# 3. Siendo d = ( x1 ** 2 + y1 ** 2) ** 0.5
 # Leer dos puntos (cuatro variables (una para cada punto) , 'x1' y 'y1').
 # Muestra cuál es el punto más cercano al origen. 
 # Úselo para determinar la distancia desde el primer punto hasta el origen.
 
+x1 = int(input('Enter x1 coordinate: '))
+y1 = int(input('Enter y1 coordinate: '))
+x2 = int(input('Enter x2 coordinate: '))
+y2 = int(input('Enter y2 coordinate: '))
 
+d1 = (x1 ** 2 + y1 ** 2) ** 0.5
+d2 = (x2 ** 2 + y2 ** 2) ** 0.5
+
+if (d1 < d2): print('x1 and y1 are closer to the origin than x2 and y2')
+elif (d1 > d2): print('x2 and y2 are closer to the origin than x1 and y1')
+else: print(f'x1 and y1 are at the same distance from the origin than x2 and y2')
